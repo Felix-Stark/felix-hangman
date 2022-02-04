@@ -1,0 +1,117 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f4fc;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section p, .section input[type="text"], .section span, .correct-word {
+    font-family: 'Amatic SC';
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.correct-word {
+    color: green;
+}
+
+.wrapper {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper figure svg > * {
+    opacity: 0;
+}
+
+p {
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.wrapper figure          svg #ground    { opacity: 1; }
+.wrapper figure.scaffold svg #scaffold  { opacity: 1; }
+.wrapper figure.head     svg #head      { opacity: 1; }
+.wrapper figure.body     svg #body      { opacity: 1; }
+.wrapper figure.arms     svg #arms      { opacity: 1; }
+.wrapper figure.legs     svg #legs      { opacity: 1; }
+
+.overlay-win, .overlay-lose {
+    margin: 0;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-delay: 1000ms;
+}
+
+.heading {
+    font-size: 48px;
+    color: #e6e211;
+    font-family: 'Press Start 2P';
+    margin: 1rem;
+}
+
+.game-button {
+    color: #fff;
+    cursor: pointer;
+    background-color: rgb(160, 167, 142);
+    font-size: 1rem;
+}
+
+.overlay-win .game-button {
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P';
+    background-color: rgb(87, 206, 76);
+    color: #e6e211;
+    border: .5rem outset rgb(168, 158, 158);
+}
+
+.overlay-lose .game-button {
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P';
+    border: .5rem outset rgb(168, 158, 158);
+    color: #333
+}
+
+.show-win, .show-lose {
+    display: flex;
+}
+
+.inputField {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height: 80vh;
+    }
+
+    h1 {
+        text-align: center;
+        letter-spacing: 6px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+}
